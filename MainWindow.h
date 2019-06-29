@@ -34,6 +34,12 @@ namespace formatter {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::TextBox^ textBox;
+	private: System::Windows::Forms::Button^ buttonFormatCode;
+	private: System::Windows::Forms::Button^ buttonSettings;
+	protected:
+
+	protected:
 
 	private:
 		/// <summary>
@@ -48,11 +54,56 @@ namespace formatter {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(300,300);
-			this->Text = L"MainWindow";
-			this->Padding = System::Windows::Forms::Padding(0);
+			this->textBox = (gcnew System::Windows::Forms::TextBox());
+			this->buttonFormatCode = (gcnew System::Windows::Forms::Button());
+			this->buttonSettings = (gcnew System::Windows::Forms::Button());
+			this->SuspendLayout();
+			// 
+			// textBox
+			// 
+			this->textBox->AcceptsTab = true;
+			this->textBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBox->Location = System::Drawing::Point(12, 12);
+			this->textBox->Multiline = true;
+			this->textBox->Name = L"textBox";
+			this->textBox->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->textBox->ScrollBars = System::Windows::Forms::ScrollBars::Both;
+			this->textBox->Size = System::Drawing::Size(1008, 510);
+			this->textBox->TabIndex = 0;
+			this->textBox->WordWrap = false;
+			// 
+			// buttonFormatCode
+			// 
+			this->buttonFormatCode->Location = System::Drawing::Point(945, 566);
+			this->buttonFormatCode->Name = L"buttonFormatCode";
+			this->buttonFormatCode->Size = System::Drawing::Size(75, 23);
+			this->buttonFormatCode->TabIndex = 1;
+			this->buttonFormatCode->Text = L"Format Code";
+			this->buttonFormatCode->UseVisualStyleBackColor = true;
+			// 
+			// buttonSettings
+			// 
+			this->buttonSettings->Location = System::Drawing::Point(864, 566);
+			this->buttonSettings->Name = L"buttonSettings";
+			this->buttonSettings->Size = System::Drawing::Size(75, 23);
+			this->buttonSettings->TabIndex = 2;
+			this->buttonSettings->Text = L"Settings";
+			this->buttonSettings->UseVisualStyleBackColor = true;
+			// 
+			// MainWindow
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->ClientSize = System::Drawing::Size(1032, 601);
+			this->Controls->Add(this->buttonSettings);
+			this->Controls->Add(this->buttonFormatCode);
+			this->Controls->Add(this->textBox);
+			this->Name = L"MainWindow";
+			this->Text = L"Formatter";
+			this->ResumeLayout(false);
+			this->PerformLayout();
+
 		}
 #pragma endregion
 	};
