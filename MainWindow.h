@@ -81,6 +81,7 @@ namespace formatter {
 			this->buttonFormatCode->TabIndex = 1;
 			this->buttonFormatCode->Text = L"Format Code";
 			this->buttonFormatCode->UseVisualStyleBackColor = true;
+			this->buttonFormatCode->Click += gcnew System::EventHandler(this, &MainWindow::ButtonFormatCode_Click);
 			// 
 			// buttonSettings
 			// 
@@ -106,5 +107,8 @@ namespace formatter {
 
 		}
 #pragma endregion
+	private: System::Void ButtonFormatCode_Click(System::Object^ sender, System::EventArgs^ e) {
+		MessageBox::Show("Your code has been formatted");
+	}
 	};
 }
