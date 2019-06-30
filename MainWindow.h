@@ -1,4 +1,5 @@
 #pragma once
+#include "SettingsWindow.h"
 
 namespace formatter {
 
@@ -91,6 +92,7 @@ namespace formatter {
 			this->buttonSettings->TabIndex = 2;
 			this->buttonSettings->Text = L"Settings";
 			this->buttonSettings->UseVisualStyleBackColor = true;
+			this->buttonSettings->Click += gcnew System::EventHandler(this, &MainWindow::ButtonSettings_Click);
 			// 
 			// MainWindow
 			// 
@@ -110,5 +112,11 @@ namespace formatter {
 	private: System::Void ButtonFormatCode_Click(System::Object^ sender, System::EventArgs^ e) {
 		MessageBox::Show("Your code has been formatted");
 	}
+
+	private: System::Void ButtonSettings_Click(System::Object^ sender, System::EventArgs^ e) {
+		Form ^settingsWindow = gcnew SettingsWindow(this);
+		settingsWindow->Show(this);
+	}
+
 	};
 }
