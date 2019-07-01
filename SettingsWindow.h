@@ -158,9 +158,9 @@ namespace formatter {
 			this->checkBox7->AutoSize = true;
 			this->checkBox7->Location = System::Drawing::Point(12, 85);
 			this->checkBox7->Name = L"checkBox7";
-			this->checkBox7->Size = System::Drawing::Size(251, 17);
+			this->checkBox7->Size = System::Drawing::Size(248, 17);
 			this->checkBox7->TabIndex = 8;
-			this->checkBox7->Text = L"Insert descritorion label in the principal comment";
+			this->checkBox7->Text = L"Insert description label in the principal comment";
 			this->checkBox7->UseVisualStyleBackColor = true;
 			// 
 			// SettingsWindow
